@@ -9,6 +9,14 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+# https://docs.github.com/en/actions/security-guides/automatic-token-authentication#permissions-for-the-github_token
+permissions:
+  actions: write
+  checks: write
+  contents: read
+  statuses: write
+  pull-requests: write
+
 jobs:
   danger:
     runs-on: ubuntu-latest
