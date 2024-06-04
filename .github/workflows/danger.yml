@@ -34,4 +34,4 @@ jobs:
       - name: Run Danger
         env:
           DANGER_GITHUB_API_TOKEN: ${{ github.token }}
-        run: bundle exec danger
+        run: bundle exec danger --fail-on-errors=true
